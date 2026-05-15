@@ -213,6 +213,56 @@
             }
         </style>
 
+        <!-- EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+            <script>
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                emailjs.init({
+                    publicKey: "gfGauo_bQdWoYnsoJ",
+                });
+
+                const form = document.getElementById("contactForm");
+
+                form.addEventListener("submit", function (e) {
+
+                    e.preventDefault();
+
+                    const templateParams = {
+
+                        from_name: document.getElementById("name").value,
+                        from_email: document.getElementById("email").value,
+                        subject: document.getElementById("subject").value,
+                        message: document.getElementById("message").value
+
+                    };
+
+                    emailjs.send(
+                        "service_zes8x7b",
+                        "template_or7l0d9",
+                        templateParams
+                    )
+                    .then(() => {
+
+                        alert("Mensaje enviado correctamente");
+                        form.reset();
+
+                    })
+                    .catch((error) => {
+
+                        console.error(error);
+                        alert("Error al enviar el mensaje");
+
+                    });
+
+                });
+
+            });
+
+            </script>
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8LCZ5NK5"></script>
         <script>
@@ -308,7 +358,7 @@
                                 Envíanos un mensaje
                             </h2>
 
-                            <form class="space-y-md">
+                            <form id="contactForm" class="space-y-md">
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
 
@@ -318,6 +368,7 @@
                                         </label>
 
                                         <input
+                                            id="name"
                                             class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface"
                                             placeholder="Dr. Juan Pérez"
                                             type="text"
@@ -330,7 +381,7 @@
                                         </label>
 
                                         <input 
-                                            id="emailInput"
+                                            id="email"
                                             class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface"
                                             placeholder="juan.perez@clinica.com"
                                             type="email"
@@ -345,14 +396,12 @@
                                         Asunto del Mensaje
                                     </label>
 
-                                    <div class="relative">
-
-                                        <textarea 
-                                            rows="1"
-                                            class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface resize-none"
-                                            placeholder="Escriba su mensaje aquí..."
-                                        ></textarea>
-                                    </div>
+                                    <textarea 
+                                        id="subject"
+                                        rows="1"
+                                        class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface resize-none"
+                                        placeholder="Asunto"
+                                    ></textarea>
                                 </div>
 
                                 <div class="flex flex-col gap-xs">
@@ -362,6 +411,7 @@
                                     </label>
 
                                     <textarea
+                                        id="message"
                                         class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface resize-none min-h-[140px]"
                                         placeholder="¿Cómo podemos ayudarte hoy?"
                                     ></textarea>
