@@ -216,7 +216,7 @@
         <!-- EmailJS -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-            <script>
+        <script>
 
             document.addEventListener("DOMContentLoaded", function () {
 
@@ -261,7 +261,7 @@
 
             });
 
-            </script>
+        </script>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-GM8LCZ5NK5"></script>
@@ -381,7 +381,8 @@
                                         </label>
 
                                         <input 
-                                            id="email"
+                                            id="emailInput"
+                                            name="email"
                                             class="w-full bg-surface-container-low p-md rounded-lg border-b border-outline-variant form-input-focus transition-all text-on-surface"
                                             placeholder="juan.perez@clinica.com"
                                             type="email"
@@ -626,115 +627,115 @@
             <!-- Footer -->
         <footer class="w-full mt-0 bg-surface-container-low border-t border-outline-variant">
 
-                        <div class="max-w-[1200px] mx-auto px-margin py-xl">
+                    <div class="max-w-[1200px] mx-auto px-margin py-xl">
 
-                            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-                                <!-- MARCA -->
-                                <div class="space-y-sm md:col-span-2">
-                                    <img src="recursos/logo  rgb-05.png" class="w-40 h-auto font-h2" alt="logo_promatec_azul">
+                            <!-- MARCA -->
+                            <div class="space-y-sm md:col-span-2">
+                                <img src="recursos/logo  rgb-05.png" class="w-40 h-auto font-h2" alt="logo_promatec_azul">
 
-                                    <p class="font-body-md text-on-surface-variant max-w-md leading-relaxed">
-                                        Ciencia con Corazón. Innovación y farmacología veterinaria 
-                                        especializada para el bienestar animal.
-                                    </p>
-
-                                    <div class="flex gap-md pt-sm">
-
-                                        <!-- <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
-                                            language
-                                        </span> -->
-
-                                        <a href="contacto.html">
-                                            <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
-                                                mail
-                                            </span>
-                                        </a>
-
-                                        <a href="https://wa.me/50763932103">
-                                            <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
-                                                call
-                                            </span>
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                                <!-- LINKS -->
-                                <div class="space-y-sm">
-                                    <h4 class="font-label-sm font-bold uppercase tracking-widest text-on-surface">
-                                        Navegación
-                                    </h4>
-
-                                    <div class="flex flex-col gap-2">
-
-                                        <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors">
-                                            Inicio
-                                        </a>
-
-                                        <a href="productos.html" class="text-on-surface-variant hover:text-primary transition-colors">
-                                            Productos
-                                        </a>
-
-                                        <a href="Qsomos.html" class="text-on-surface-variant hover:text-primary transition-colors">
-                                            Nosotros
-                                        </a>
-
-                                        <a href="contacto.html" class="text-on-surface-variant hover:text-primary transition-colors">
-                                            Contacto
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                                <!-- CONTACTO -->
-                                <div class="space-y-sm">
-                                    <h4 class="font-label-sm font-bold uppercase tracking-widest text-on-surface">
-                                        Contacto
-                                    </h4>
-
-                                    <p class="font-body-md text-on-surface-variant leading-relaxed">
-                                        Avenida Cincuentenario, Urb. Coco del Mar, Casa 1<br>
-                                        Ciudad de Panamá, Panamá
-                                    </p>
-
-                                    <p class="font-body-md text-on-surface-variant">
-                                        +507 6393-2103
-                                    </p>
-
-                                    <p class="font-body-md text-on-surface-variant">
-                                        contacto@promatec.com
-                                    </p>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- BOTTOM -->
-                        <div class="border-t border-outline-variant/30">
-
-                            <div class="max-w-[1200px] mx-auto px-margin py-md flex flex-col md:flex-row justify-between items-center gap-3">
-
-                                <p class="font-label-sm text-on-surface-variant text-center md:text-left">
-                                    © 2026 Promatec. Todos los derechos reservados.
+                                <p class="font-body-md text-on-surface-variant max-w-md leading-relaxed">
+                                    Ciencia con Corazón. Innovación y farmacología veterinaria 
+                                    especializada para el bienestar animal.
                                 </p>
 
-                                <div class="flex gap-4 text-sm">
+                                <div class="flex gap-md pt-sm">
 
-                                    <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">
-                                        Privacidad
+                                    <!-- <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
+                                        language
+                                    </span> -->
+
+                                    <a href="contacto.html">
+                                        <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
+                                            mail
+                                        </span>
                                     </a>
 
-                                    <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">
-                                        Términos
+                                    <a href="https://wa.me/50763932103">
+                                        <span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">
+                                            call
+                                        </span>
                                     </a>
 
                                 </div>
+                            </div>
+
+                            <!-- LINKS -->
+                            <div class="space-y-sm">
+                                <h4 class="font-label-sm font-bold uppercase tracking-widest text-on-surface">
+                                    Navegación
+                                </h4>
+
+                                <div class="flex flex-col gap-2">
+
+                                    <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors">
+                                        Inicio
+                                    </a>
+
+                                    <a href="productos.html" class="text-on-surface-variant hover:text-primary transition-colors">
+                                        Productos
+                                    </a>
+
+                                    <a href="Qsomos.html" class="text-on-surface-variant hover:text-primary transition-colors">
+                                        Quienes Somos
+                                    </a>
+
+                                    <a href="contacto.html" class="text-on-surface-variant hover:text-primary transition-colors">
+                                        Contacto
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <!-- CONTACTO -->
+                            <div class="space-y-sm">
+                                <h4 class="font-label-sm font-bold uppercase tracking-widest text-on-surface">
+                                    Contacto
+                                </h4>
+
+                                <p class="font-body-md text-on-surface-variant leading-relaxed">
+                                    Avenida Cincuentenario, Urb. Coco del Mar, Casa 1<br>
+                                    Ciudad de Panamá, Panamá
+                                </p>
+
+                                <p class="font-body-md text-on-surface-variant">
+                                    +507 6393-2103
+                                </p>
+
+                                <p class="font-body-md text-on-surface-variant">
+                                    contacto@promatec.com
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BOTTOM -->
+                    <div class="border-t border-outline-variant/30">
+
+                        <div class="max-w-[1200px] mx-auto px-margin py-md flex flex-col md:flex-row justify-between items-center gap-3">
+
+                            <p class="font-label-sm text-on-surface-variant text-center md:text-left">
+                                © 2026 Promatec. Todos los derechos reservados.
+                            </p>
+
+                            <div class="flex gap-4 text-sm">
+
+                                <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">
+                                    Privacidad
+                                </a>
+
+                                <a href="#" class="text-on-surface-variant hover:text-primary transition-colors">
+                                    Términos
+                                </a>
 
                             </div>
 
                         </div>
+
+                    </div>
 
         </footer>
          
